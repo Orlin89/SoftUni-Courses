@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "6d964ddd-f2b6-4938-9bac-e735517119de",
+		"name": "Movie app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32754021"
+	},
+	"item": [
+		{
+			"name": "/api/User/Authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"harley_dn@abv.bg\",\r\n  \"password\": \"1234567890\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/User/Authentication",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"User",
+						"Authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/Movie/Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJmNTFlODA0ZC1lNTlhLTQ0M2QtYWZlYy04ZTA1ZTRkYTlkNzUiLCJpYXQiOiI0LzE0LzIwMjQgMTE6MTQ6NDEgQU0iLCJVc2VySWQiOiI3MTg4ZWU4Ny0zMTQzLTRlYmItMTJkMC0wOGRjNWM0ODRjZDMiLCJFbWFpbCI6ImhhcmxleV9kbkBhYnYuYmciLCJVc2VyTmFtZSI6IkhhckxMRVkxMjM0IiwiZXhwIjoxNzEzMTE0ODgxLCJpc3MiOiJNb3ZpZUNhdGFsb2dfQXBwX1NvZnRVbmkiLCJhdWQiOiJNb3ZpZUNhdGFsb2dfV2ViQVBJX1NvZnRVbmkifQ.e-ZxX38PYBHzsnZRIPbrR93oxgW8ctwmYcv-XyKQlRI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Kong\",\r\n  \"description\": \"new movie with kong\",\r\n  \"posterUrl\": \"\",\r\n  \"trailerLink\": \"\",\r\n  \"isWatched\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/Movie/Create",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Movie",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/Catalog/All",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJmNTFlODA0ZC1lNTlhLTQ0M2QtYWZlYy04ZTA1ZTRkYTlkNzUiLCJpYXQiOiI0LzE0LzIwMjQgMTE6MTQ6NDEgQU0iLCJVc2VySWQiOiI3MTg4ZWU4Ny0zMTQzLTRlYmItMTJkMC0wOGRjNWM0ODRjZDMiLCJFbWFpbCI6ImhhcmxleV9kbkBhYnYuYmciLCJVc2VyTmFtZSI6IkhhckxMRVkxMjM0IiwiZXhwIjoxNzEzMTE0ODgxLCJpc3MiOiJNb3ZpZUNhdGFsb2dfQXBwX1NvZnRVbmkiLCJhdWQiOiJNb3ZpZUNhdGFsb2dfV2ViQVBJX1NvZnRVbmkifQ.e-ZxX38PYBHzsnZRIPbrR93oxgW8ctwmYcv-XyKQlRI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/Catalog/All",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Catalog",
+						"All"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/Movie/Edit?movieId=613fcf13-ba59-4a88-d0dd-08dc5c49ee87",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJmNTFlODA0ZC1lNTlhLTQ0M2QtYWZlYy04ZTA1ZTRkYTlkNzUiLCJpYXQiOiI0LzE0LzIwMjQgMTE6MTQ6NDEgQU0iLCJVc2VySWQiOiI3MTg4ZWU4Ny0zMTQzLTRlYmItMTJkMC0wOGRjNWM0ODRjZDMiLCJFbWFpbCI6ImhhcmxleV9kbkBhYnYuYmciLCJVc2VyTmFtZSI6IkhhckxMRVkxMjM0IiwiZXhwIjoxNzEzMTE0ODgxLCJpc3MiOiJNb3ZpZUNhdGFsb2dfQXBwX1NvZnRVbmkiLCJhdWQiOiJNb3ZpZUNhdGFsb2dfV2ViQVBJX1NvZnRVbmkifQ.e-ZxX38PYBHzsnZRIPbrR93oxgW8ctwmYcv-XyKQlRI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \t\"title\": \"Old kong\",\r\n  \t\"description\": \"new movie with kong\",\r\n  \t\"posterUrl\": \"\",\r\n  \t\"trailerLink\": \"\",\r\n  \t\"isWatched\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/Movie/Edit?movieId=613fcf13-ba59-4a88-d0dd-08dc5c49ee87",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Movie",
+						"Edit"
+					],
+					"query": [
+						{
+							"key": "movieId",
+							"value": "613fcf13-ba59-4a88-d0dd-08dc5c49ee87"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/Movie/Delete?movieId=613fcf13-ba59-4a88-d0dd-08dc5c49ee87",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJmNTFlODA0ZC1lNTlhLTQ0M2QtYWZlYy04ZTA1ZTRkYTlkNzUiLCJpYXQiOiI0LzE0LzIwMjQgMTE6MTQ6NDEgQU0iLCJVc2VySWQiOiI3MTg4ZWU4Ny0zMTQzLTRlYmItMTJkMC0wOGRjNWM0ODRjZDMiLCJFbWFpbCI6ImhhcmxleV9kbkBhYnYuYmciLCJVc2VyTmFtZSI6IkhhckxMRVkxMjM0IiwiZXhwIjoxNzEzMTE0ODgxLCJpc3MiOiJNb3ZpZUNhdGFsb2dfQXBwX1NvZnRVbmkiLCJhdWQiOiJNb3ZpZUNhdGFsb2dfV2ViQVBJX1NvZnRVbmkifQ.e-ZxX38PYBHzsnZRIPbrR93oxgW8ctwmYcv-XyKQlRI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/Movie/Delete?movieId=613fcf13-ba59-4a88-d0dd-08dc5c49ee87",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Movie",
+						"Delete"
+					],
+					"query": [
+						{
+							"key": "movieId",
+							"value": "613fcf13-ba59-4a88-d0dd-08dc5c49ee87"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
